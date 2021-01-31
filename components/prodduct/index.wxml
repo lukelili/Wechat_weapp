@@ -1,0 +1,28 @@
+<view class="list">
+    <view class="item" WX:for="{{ products }}" wx:item="item" wx:key="{{ item.id }}">
+      <van-swipe-cell right-width="{{ 65 }}">
+        <view class="row">
+          <view class="picture">
+            <van-image width="12rem" height="8rem" fit="contain">
+            </van-image>
+            <view class="position">
+              <text class="text">{{ item.position }}</text>
+            </view>
+          </view>
+          <view class="info">
+            <view class="line1">{{ item.title }}</view>
+            <view class="line1">
+              <text class="score">4.6分</text>
+              <text class="number">5000+消费</text>
+            </view>
+            <view class="line3">
+              <text class="price">¥360</text>
+              <text class="vice">起</text>
+              <text class="red">新人红包</text>
+            </view>
+          </view>
+        </view>
+        <view slot="right">删除</view>
+      </van-swipe-cell>
+    </view>
+  </view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "productor": "/components/prodduct/index"
+
+  },
+  "navigationBarTitleText": "浏览历史"
+}

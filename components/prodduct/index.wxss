@@ -1,0 +1,59 @@
+
+.item{
+  margin-bottom: 30rpx;
+}
+.row {
+  display: flex;
+}
+.row .picture{
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+}
+.row .picture .position{
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+  font-size: 24rpx;
+}
+.row .picture .position .text{
+  padding: 6rpx 16rpx;
+  border-radius: 30rpx;
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+}
+.row .info{
+  margin-left: 30rpx;
+}
+.row .info .line1{
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+.row .info .line2{
+  margin-bottom: 10rpx;
+}
+.row .info .score{
+  font-weight: bold;
+  color: #2ad093;
+}
+.row .info .number{
+  font-size: 24rpx;
+  margin-left: 30rpx;
+}
+.row .info .price{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #ff6162;
+}
+.row .info .vice{
+  font-size: 24rpx;
+  color: #ccc;
+  margin-left: 10rpx;
+}
+.row .info .red{
+  margin-left: 20rpx;
+  padding: 6rpx 14rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #ffd66a;
+  color: #ffd66a;
+}

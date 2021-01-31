@@ -1,0 +1,39 @@
+.card{
+  margin: 30rpx;
+  border-radius: 6px;
+  box-shadow: #ccc 0px 0px 8px;
+  overflow: hidden;
+}
+.user-block{
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+}
+.user-block .user-info{
+  margin-left: 30rpx;
+}
+.user-block .user-info .name{
+  margin-bottom: 10rpx;
+}
+.user-block .user-info .grade{
+  color: #fff;
+  font-size: 24rpx;
+  padding: 8rpx 20rpx;
+  display: inline;
+  border-radius: 40rpx;
+  background-color: #ffc61b;
+}
+
+.fast-enter{
+  display: flex;
+  justify-content: space-between;
+}
+.fast-enter .item{
+  flex: 1;
+  text-align: center;
+  padding: 40rpx 0 20rpx 0;
+}
+.fast-enter .item .name{
+  font-size: 24rpx;
+  color: #ccc;
+}

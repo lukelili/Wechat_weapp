@@ -1,0 +1,64 @@
+<view class="container-full">
+  <view class="user-block">
+    <van-image round width="5rem" height="5rem" />
+    <view class="user-info">
+      <view class="name">
+        <text>用户188****1734</text>
+      </view>
+      <view class="grade">普通会员</view>
+    </view>
+  </view>
+  <view class="fast-enter">
+    <navigator class="item" open-type="switchTab" url="/pages/like/index">
+      <view class="count">12</view>
+      <view class="name">我的收藏</view>
+    </navigator>
+    <navigator class="item" open-type="navigate" url="/pages/user/history/index">
+      <view class="count">12</view>
+      <view class="name">浏览历史</view>
+    </navigator>
+    <navigator class="item" open-type="navigate" url="/pages/user/coupon/index">
+      <view class="count">12</view>
+      <view class="name">优惠券</view>
+    </navigator>
+  </view>
+  <!-- <button type="primary" plain>登录/注册</button> -->
+  <view class="card">
+    <van-cell title="我的订单" is-link />
+    <van-grid clickable border="{{ false }}" column-num="4">
+      <van-grid-item
+        icon="balance-list-o"
+        icon-color="#3da8f3"
+        link-type="navigateTo"
+        url="/pages/dashboard/index"
+        text="全部订单"
+      />
+      <van-grid-item
+        icon="peer-pay"
+        icon-color="#ff6162"
+        link-type="reLaunch"
+        url="/pages/dashboard/index"
+        text="待付款"
+      />
+      <van-grid-item
+        icon="fire-o"
+        icon-color="#5ed7a5"
+        link-type="reLaunch"
+        url="/pages/dashboard/index"
+        text="待入住"
+      />
+      <van-grid-item
+        icon="balance-pay"
+        icon-color="#8990ec"
+        link-type="reLaunch"
+        url="/pages/dashboard/index"
+        text="已消费"
+      />
+    </van-grid>
+  </view>
+  <van-cell icon="vip-card-o" title="会员中心" is-link />
+  <van-cell icon="after-sale" title="我的钱包" is-link />
+  <van-cell icon="coupon-o " title="领券中心" is-link />
+  <van-cell icon="envelop-o" title="常用信息" is-link />
+  <van-cell icon="thumb-circle-o" title="我的评价" is-link />
+</view>

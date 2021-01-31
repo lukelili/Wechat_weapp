@@ -1,0 +1,3 @@
+<view class="container">
+  <productor products="{{ products }}" mode="vertical"></productor>
+</view>

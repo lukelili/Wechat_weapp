@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="item" wx:for="{{ coupons }}" wx:item="item" wx:key="{{ item.id }}">
+    <view class="top">
+      <view class="left">
+        <text class="mark">¥</text>
+        <text class="number">{{ item.price}}</text>
+      </view>
+      <view class="center">
+        <view class="big-title">{{ item.title }}</view>
+        <view class="small-title">有效期至 {{ item.period }}</view>
+      </view>
+      <view class="right">
+        <van-button color="#FF6262" round size="small">立即使用</van-button>
+      </view>
+    </view>
+    <view class="bot">{{ item.describe }}</view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="container">
+  <van-button type="primary">haha</van-button>
+</view>
