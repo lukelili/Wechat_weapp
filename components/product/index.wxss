@@ -1,9 +1,27 @@
 
-.item{
-  margin-bottom: 30rpx;
+.list{
+  padding: var(--md-pd);
 }
-.row {
+/* 水平1列 */
+.vertical .item{
+  margin-bottom: 20rpx;
+}
+.vertical .row {
   display: flex;
+  align-items: center;
+}
+/* 水平2列 */
+.horizontal{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.horizontal .item{
+  width: 48%;
+  margin-bottom: var(--md-mg);
+}
+.horizontal .item .row .info{
+  margin-left: 0;
 }
 .row .picture{
   border-radius: 10rpx;
@@ -26,11 +44,13 @@
   margin-left: 30rpx;
 }
 .row .info .line1{
-  margin-bottom: 20rpx;
   font-weight: bold;
 }
 .row .info .line2{
-  margin-bottom: 10rpx;
+  padding: var(--sm-pd) 0;
+}
+.row .info .line3{
+  padding-bottom: 4rpx;
 }
 .row .info .score{
   font-weight: bold;

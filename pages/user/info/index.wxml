@@ -1,0 +1,26 @@
+<view class="list">
+  <view class="item">
+    <view class="top">
+      <view class="info">
+        <text class="name">李铭耳</text>
+        <text class="sex">男</text>
+        <text class="age">32岁</text>
+      </view>
+      <view class="operator" bindtap="handleDelete">
+        <van-icon name="delete" />
+      </view>
+    </view>
+    <view class="bot">
+      <view class="id-card">
+        6222600910074911775
+      </view>
+      <view class="tel-phone">
+        18301657324
+      </view>
+    </view>
+  </view>
+</view>
+<navigator class="add-info" url="/pages/user/info/addInfo/index">
+  <van-icon name="add-o" color="#ccc" size="1.5rem" />
+  <view class="text">新增常用旅客</view>
+</navigator>

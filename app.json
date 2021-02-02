@@ -8,7 +8,16 @@
     "pages/logs/logs",
     "pages/login/index",
     "pages/user/coupon/index",
-    "pages/user/history/index"
+    "pages/user/history/index",
+    "pages/user/orders/index",
+    "components/orders/index",
+    "pages/user/couponCenter/index",
+    "pages/user/wallet/index",
+    "pages/user/member/index",
+    "pages/user/info/index",
+    "pages/user/comment/index",
+    "pages/user/info/addInfo/index",
+    "pages/home/city/index"
   ],
   "window": {
     "navigationBarTitleText": "首页",
@@ -21,12 +30,26 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-image": "@vant/weapp/image/index",
-    "van-loading": "@vant/weapp/loading/index"
+    "van-loading": "@vant/weapp/loading/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-search": "@vant/weapp/search/index"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#333",
-    "selectedColor": "#07c160",
+    "selectedColor": "#FF6262",
     "list": [
       {
         "text": "首页",

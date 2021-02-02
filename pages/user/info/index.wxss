@@ -1,0 +1,47 @@
+page{
+  padding: var(--md-pd);
+}
+.list{
+  margin-bottom: var(--md-mg);
+}
+.item{
+  padding: var(--md-pd);
+  border-radius: 14rpx;
+  position: relative;
+  border: 1px solid #ff6162;
+  background-color: #fff8f8;
+}
+.item .top{
+  margin-bottom: 20rpx;
+}
+.item .top, .item .bot{
+  display: flex;
+  justify-content: space-between;
+}
+.top .name {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.top .sex{
+  margin: 0 var(--md-mg);
+}
+.top .sex, .top .age{
+  color: #666;
+}
+.top .operator{
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  padding: 20rpx;
+}
+
+.add-info{
+  padding: var(--md-pd);
+  border: 1px dashed #eee;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #ccc;
+}
+.add-info .text{
+  padding-top: 18rpx;
+}

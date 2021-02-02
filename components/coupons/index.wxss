@@ -1,0 +1,46 @@
+.list{
+  padding: var(--md-pd);
+}
+.item{
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+  border-radius: 20rpx;
+  box-shadow: #ccc 0 0 8px;
+}
+.item .top {
+  display: flex;
+  padding: 30rpx 0;
+}
+.item .top .left {
+  padding-right: 40rpx;
+  font-size: 90rpx;
+  font-weight: bold;
+  color: #FF6262;
+}
+.item .top .left .mark{
+  font-size: 32rpx;
+}
+.item .top .center{
+  flex: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item .top .center .small-title {
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.item .top .right{
+  display: flex;
+  align-items: center;
+}
+
+.item .bot{
+  padding: 0 10rpx;
+  border-top: 1rpx solid #eee;
+  padding-top: 30rpx;
+  color: #ccc;
+}

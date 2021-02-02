@@ -1,0 +1,14 @@
+<van-tabs active="{{ active }}" bind:change="handleTabChange" sticky>
+  <van-tab title="全部订单" name="all">
+    <orders orders="{{ orders }}" />
+  </van-tab>
+  <van-tab title="待付款" name="toBePaid">
+    <orders orders="{{ filtersData }}" />
+  </van-tab>
+  <van-tab title="待入住" name="stay">
+    <orders orders="{{ filtersData }}" />
+  </van-tab>
+  <van-tab title="已消费" name="paid">
+    <orders orders="{{ filtersData }}" />
+  </van-tab>
+</van-tabs>

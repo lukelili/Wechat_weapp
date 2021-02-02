@@ -1,5 +1,31 @@
-/**app.wxss**/
-.container {
-  padding: 30rpx;
+page{
+  /* 字体大小 */
+  --sm-font: 24rpx;
+  --md-font: 28rpx;
+  --lg-font: 32rpx;
+  /* 内边距 */
+  --sm-pd: 10rpx;
+  --md-pd: 30rpx;
+  --lg-pd: 50rpx;
+  /* 外边距 */
+  --sm-mg: 10rpx;
+  --md-mg: 30rpx;
+  --lg-mg: 50rpx;
+  /* 圆角 */
+  --sm-round: 10rpx;
+  --md-round: 16rpx;
+  --lg-round: 24rpx;
+  /* 四边阴影 */
+  --shadow: #eee 0 0 10px;
+  /* 主题色 */
+  --themeColor: '#FF6262';
+  --viceColor: #ccc;
+  /* 全局样式 */
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-} 
+  font-size: 28rpx;
+  color: #333;
+}

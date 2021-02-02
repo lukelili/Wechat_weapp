@@ -1,0 +1,17 @@
+<view class="search">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    show-action
+    bind:change="onSearchChange"
+    bind:search="onSearch"
+    bind:cancel="onCancel"
+  />
+  <view hidden="{{ isShowModel }}" class="model"></view>
+</view>
+<van-index-bar>
+  <view wx:for="{{ cityList }}" wx:item="item" wx:key="idx">
+    <van-index-anchor index="{{ item.idx }}" />
+    <van-cell wx:for="{{ item.cities }}" wx:for-item="child" wx:key="id" title="{{ child.name }}" />
+  </view>
+</van-index-bar>

@@ -75,6 +75,31 @@
         {
           "name": "pages/user/history/index",
           "pathName": "pages/user/history/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/orders/index",
+          "pathName": "pages/user/orders/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/couponCenter/index",
+          "pathName": "pages/user/couponCenter/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/info/addInfo/index",
+          "pathName": "pages/user/info/addInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/city/index",
+          "pathName": "pages/home/city/index",
+          "query": "",
           "scene": null
         }
       ]

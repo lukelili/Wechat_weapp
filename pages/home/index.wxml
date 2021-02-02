@@ -1,3 +1,44 @@
-<view class="container">
-  <van-button type="primary">haha</van-button>
+<view class="card">
+  <van-cell title="北京市" url="./city/index">
+    <van-icon slot="right-icon" name="location" color="#ccc" />
+  </van-cell>
+  <van-cell>
+    <view slot="title" class="calendar">
+      <view class="item">
+        <view class="small">入住</view>
+        <view class="date">12月17日</view>
+      </view>
+      <view class="item">
+        <view class="small">离店</view>
+        <view class="date">12月18日</view>
+      </view>
+      <view class="item day">
+        共1晚
+      </view>
+    </view>
+    <van-icon slot="right-icon" name="calendar-o" color="#ccc" />
+  </van-cell>
+  <van-cell title="搜索酒店/地名/关键字">
+    <van-icon slot="right-icon" name="search" color="#ccc" />
+  </van-cell>
+  <view class="btn">
+    <van-button type="primary" block>搜索</van-button>
+  </view>
 </view>
+<van-tabs active="{{ active }}" bind:change="handleTabChange" sticky>
+  <van-tab title="推荐" name="hot">
+    <product products="{{ products }}" mode="horizontal" />
+  </van-tab>
+  <van-tab title="情侣" name="couple">
+    <product products="{{ products }}" mode="horizontal" />
+  </van-tab>
+  <van-tab title="亲子" name="child">
+    <product products="{{ products }}" mode="horizontal" />
+  </van-tab>
+  <van-tab title="民宿" name="homeStay">
+    <product products="{{ products }}" mode="horizontal" />
+  </van-tab>
+  <van-tab title="五星" name="fiveStar">
+    <product products="{{ products }}" mode="horizontal" />
+  </van-tab>
+</van-tabs>

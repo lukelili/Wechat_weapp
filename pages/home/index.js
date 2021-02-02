@@ -5,7 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    active: 'hot',
+    products: [
+      {
+        picture: '',
+        position: "南锣鼓巷附近",
+        title: '锦江之星（北京王府井店）',
+        score: '4.6',
+        number: '5000+',
+        price: '360',
+        red: '新人红包',
+        id: 1
+      },
+      {
+        picture: '',
+        position: "南锣鼓巷附近",
+        title: '锦江之星（北京王府井店）',
+        score: '4.6',
+        number: '5000+',
+        price: '360',
+        red: '新人红包',
+        id: 2
+      },
+      {
+        picture: '',
+        position: "南锣鼓巷附近",
+        title: '锦江之星（北京王府井店）',
+        score: '4.6',
+        number: '5000+',
+        price: '360',
+        red: '新人红包',
+        id: 3
+      },
+      {
+        picture: '',
+        position: "南锣鼓巷附近",
+        title: '锦江之星（北京王府井店）',
+        score: '4.6',
+        number: '5000+',
+        price: '360',
+        red: '新人红包',
+        id: 4
+      }
+    ]
   },
 
   /**
@@ -14,7 +56,7 @@ Page({
   onLoad: function (options) {
 
   },
-
+  handleTabChange() {},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

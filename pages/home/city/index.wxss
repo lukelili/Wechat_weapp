@@ -1,0 +1,12 @@
+.search{
+  position: relative;
+}
+.model{
+  width: 100%;
+  height: calc(100vh - 54px);
+  position: absolute;
+  left: 0;
+  top: 54px;
+  z-index: 100;
+  background-color: #fff;
+}

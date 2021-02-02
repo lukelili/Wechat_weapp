@@ -1,0 +1,6 @@
+.line{
+  border-bottom: 10px solid #eee;
+}
+.btn{
+  padding: var(--md-pd);
+}

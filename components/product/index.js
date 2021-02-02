@@ -1,4 +1,3 @@
-// components/prodduct/index.js
 Component({
   /**
    * 组件的属性列表
@@ -10,7 +9,7 @@ Component({
     },
     mode: {
       type: String,
-      value: ''
+      value: 'vertical'
     }
   },
 

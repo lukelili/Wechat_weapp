@@ -1,1 +1,27 @@
-/* pages/home/index.wxml.wxss */
+.card{
+  border-radius: var(--md-round);
+  margin: var(--md-mg);
+  box-shadow: var(--shadow);
+}
+.btn{
+  padding: var(--md-pd);
+}
+.calendar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calendar .item{
+  flex: 1;
+  padding: var(--sm-pd) 0 var(--sm-pd) 0;
+}
+.calendar .item .small{
+  font-size: var(--sm-font);
+  color: var(--viceColor);
+}
+.calendar .item .date{
+  font-weight: bold;
+}
+.calendar .day{
+  font-size: var(--sm-font);
+}
