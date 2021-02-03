@@ -1,5 +1,9 @@
 .search{
-  position: relative;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 .model{
   width: 100%;
@@ -9,4 +13,12 @@
   top: 54px;
   z-index: 100;
   background-color: #fff;
+}
+.van-index-bar__sidebar{
+  padding: 20rpx 0;
+  border-radius: 30rpx;
+  background-color: rgba(0,0,0,.1);
+}
+.van-index-bar__sidebar .van-index-bar__index{
+  padding: 4rpx 10rpx;
 }

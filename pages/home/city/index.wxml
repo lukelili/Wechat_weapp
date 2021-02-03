@@ -7,11 +7,14 @@
     bind:search="onSearch"
     bind:cancel="onCancel"
   />
-  <view hidden="{{ isShowModel }}" class="model"></view>
+  <view hidden="{{ hiddenModel }}" class="model">
+    <van-cell wx:for="{{ cities }}" wx:item="item" wx:key="id" title="{{ item.name }}" />
+  </view>
 </view>
-<van-index-bar>
+<van-index-bar index-list="{{ indexList }}" sticky-offset-top="54" highlight-color="#FF6262" bind:select="handleIndexSelect">
   <view wx:for="{{ cityList }}" wx:item="item" wx:key="idx">
     <van-index-anchor index="{{ item.idx }}" />
     <van-cell wx:for="{{ item.cities }}" wx:for-item="child" wx:key="id" title="{{ child.name }}" />
   </view>
 </van-index-bar>
+<van-toast id="van-toast" />
