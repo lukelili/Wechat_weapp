@@ -3,15 +3,16 @@
     value="{{ value }}"
     placeholder="请输入搜索关键词"
     show-action
+    background="#FF6262"
     bind:change="onSearchChange"
     bind:search="onSearch"
     bind:cancel="onCancel"
   />
-  <view hidden="{{ hiddenModel }}" class="model">
+  <scroll-view onTouchMove="cityModelTouchMove" hidden="{{ hiddenModel }}" scroll-y="{{ true }}" class="model">
     <van-cell wx:for="{{ cities }}" wx:item="item" wx:key="id" title="{{ item.name }}" />
-  </view>
+  </scroll-view>
 </view>
-<van-index-bar index-list="{{ indexList }}" sticky-offset-top="54" highlight-color="#FF6262" bind:select="handleIndexSelect">
+<van-index-bar hidden="{{ !hiddenModel}}" index-list="{{ indexList }}" sticky-offset-top="54" highlight-color="#FF6262" bind:select="handleIndexSelect">
   <view wx:for="{{ cityList }}" wx:item="item" wx:key="idx">
     <van-index-anchor index="{{ item.idx }}" />
     <van-cell wx:for="{{ item.cities }}" wx:for-item="child" wx:key="id" title="{{ child.name }}" />

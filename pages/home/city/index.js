@@ -27,7 +27,6 @@ Page({
     this.setData({
       indexList: indexs
     })
-    console.log(this.data.cityList)
   },
   // 城市索引选中
   handleIndexSelect(e) {
@@ -39,29 +38,34 @@ Page({
   // 搜索输入框
   onSearchChange(e) {
     const value = e.detail
-    if (!value.length) {
-      this.setData({
-        hiddenModel: true
-      })
-      return
+    const hide = value.length ? false : true
+    this.setData({ hiddenModel: hide })
+    if (hide) return
+    const isChina = /^[\u4e00-\u9fa5]*$/.test(value)
+    const parame = {
+      match: 'name',
+      value: value
     }
-    this.setData({
-      hiddenModel: false
+    // 非中文
+    if (!isChina) {
+      parame.match = 'pinyin'
+      parame.value = pinyin.getFullChars(value).toLowerCase()
+    }
+    this.matchCity(parame.match, parame.value)
+  },
+  matchCity(property, val) {
+    // 1. 将值转为字母 取首位 转大写
+    const firstVal = pinyin.getFullChars(val).slice(0, 1).toUpperCase()
+    // 2. 根据首位的字母 匹配索引 找到对应的数据
+    const matchData = this.data.cityList.filter(item => item.idx === firstVal)[0]
+    const data = matchData.cities.filter(item => {
+      if (item[property].indexOf(val) !== -1) {
+        return item
+      }
     })
-    // 存储值的首位
-    let first = ''
-    const cityList = this.data.cityList
-    let sliceValue = value.slice(0, 1)
-    first = sliceValue.toUpperCase()
-    if (/^[\u4e00-\u9fa5]*$/.test(sliceValue)) {
-      first = pinyin.getFullChars(sliceValue).slice(0, 1)
-    }
-    const cities = cityList.filter(item => item.idx === first)
-    if (value.length === 1) {
-      this.setData({
-        cities: cities[0].cities
-      })
-    }
+    this.setData({
+      cities: data
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
