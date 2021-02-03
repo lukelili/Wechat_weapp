@@ -58,6 +58,7 @@ Page({
     }
     const cities = cityList.filter(item => item.idx === first)
     if (value.length === 1) {
+      const a = ''
       this.setData({
         cities: cities[0].cities
       })
