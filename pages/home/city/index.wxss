@@ -12,6 +12,7 @@
   left: 0;
   top: 54px;
   z-index: 100;
+  overflow-y: auto;
   background-color: #fff;
 }
 .van-index-bar__sidebar{
