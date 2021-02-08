@@ -1,33 +1,43 @@
 <view class="user-block">
-  <van-image round width="5rem" height="5rem" />
-  <view class="user-info">
-    <view class="name">
-      <text>用户188****1734</text>
+  <van-image class="bg" mode="contain" src="/icon/user_bg.jpg" width="100%" height="15rem" />
+  <view class="user-box">
+    <van-image round src="{{ userInfo.avatarUrl }}" width="5rem" height="5rem" />
+    <view class="user-info">
+      <block wx:if="{{ userInfo.nickName }}">
+        <view class="name">
+          <text>{{ userInfo.nickName }}</text>
+        </view>
+        <view class="grade">普通会员</view>
+      </block>
+      <navigator url="/pages/login/index" hover-class="none" wx:else>游侠(去登录)</navigator>
     </view>
-    <view class="grade">普通会员</view>
   </view>
 </view>
-<view class="fast-enter">
-  <navigator class="item" open-type="switchTab" url="/pages/like/index">
-    <view class="count">12</view>
-    <view class="name">我的收藏</view>
-  </navigator>
-  <navigator class="item" open-type="navigate" url="/pages/user/history/index">
-    <view class="count">12</view>
-    <view class="name">浏览历史</view>
-  </navigator>
-  <navigator class="item" open-type="navigate" url="/pages/user/coupon/index">
-    <view class="count">12</view>
-    <view class="name">优惠券</view>
-  </navigator>
+<!-- 我的足迹 -->
+<view class="fast-enter-wrap">
+  <view class="fast-enter">
+    <navigator class="item" open-type="switchTab" hover-class="none" url="/pages/like/index">
+      <view class="count">12</view>
+      <view class="name">我的收藏</view>
+    </navigator>
+    <navigator class="item" open-type="navigate" hover-class="none" url="/pages/user/history/index">
+      <view class="count">12</view>
+      <view class="name">浏览历史</view>
+    </navigator>
+    <navigator class="item" open-type="navigate" hover-class="none" url="/pages/user/coupon/index">
+      <view class="count">12</view>
+      <view class="name">优惠券</view>
+    </navigator>
+  </view> 
 </view>
-<!-- <button type="primary" plain>登录/注册</button> -->
+<!-- 我的订单 -->
 <view class="card">
   <van-cell
     title="我的订单"
     link-type="navigateTo"
     url="/pages/user/orders/index?type=all"
-    is-link />
+    is-link
+  />
   <van-grid clickable border="{{ false }}" column-num="4">
     <van-grid-item
       icon="balance-list-o"
@@ -63,33 +73,13 @@
     />
   </van-grid>
 </view>
+<!-- 更多功能 -->
 <van-cell
-  icon="vip-card-o"
-  title="会员中心"
+  wx:for="{{ cells }}"
+  wx:item="item"
+  wx:key="icon"
+  icon="{{ item.icon}}"
+  title="{{ item.title}}"
   is-link
   link-type="navigateTo"
-  url="/pages/user/member/index" />
-<van-cell
-  icon="after-sale"
-  title="我的钱包"
-  is-link
-  link-type="navigateTo"
-  url="/pages/user/wallet/index" />
-<van-cell
-  icon="coupon-o"
-  title="领券中心"
-  is-link
-  link-type="navigateTo"
-  url="/pages/user/couponCenter/index" />
-<van-cell
-  icon="envelop-o"
-  title="常用信息"
-  is-link
-  link-type="navigateTo"
-  url="/pages/user/info/index" />
-<van-cell
-  icon="thumb-circle-o"
-  title="我的评价"
-  is-link
-  link-type="navigateTo"
-  url="/pages/user/comment/index" />
+  url="{{ item.url}}" />

@@ -1,66 +1,48 @@
-// pages/user/index.js
+import { getItem } from '../../utils/storage'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userInfo: {
+      avatarUrl: '',
+      gender: 1,
+      nickName: '',
+      province: ''
+    },
+    // 更多功能
+    cells: [
+      {
+        icon: 'vip-card-o',
+        title: '会员中心',
+        url: '/pages/user/member/index'
+      },
+      {
+        icon: 'after-sale',
+        title: '我的钱包',
+        url: '/pages/user/wallet/index'
+      },
+      {
+        icon: 'coupon-o',
+        title: '领券中心',
+        url: '/pages/user/couponCenter/index'
+      },
+      {
+        icon: 'envelop-o',
+        title: '常用信息',
+        url: '/pages/user/info/index'
+      },
+      {
+        icon: 'thumb-circle-o',
+        title: '我的评价',
+        url: '/pages/user/comment/index'
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onShow() {
+    this.initUser()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  initUser() {
+    const userInfo = getItem('userInfo')
+    this.setData({
+      userInfo: Object.assign({}, this.data.userInfo, userInfo)
+    })
   }
 })

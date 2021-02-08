@@ -1,0 +1,52 @@
+.right-value{
+  color: red;
+}
+.content{
+  margin-top: -80rpx;
+  padding: var(--md-pd);
+  padding-bottom: 0;
+}
+.block{
+  border-radius: var(--md-round);
+  overflow: hidden;
+  margin-bottom: var(--md-mg);
+}
+.last{
+  margin-bottom: 0;
+}
+.shadow{
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.hote-info{
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.my-cell .van-cell__value{
+  color: #ff6162;
+}
+.my-cell-title .van-cell__value{
+  color: #FFD21E;
+}
+
+/* 选择入住时间 */
+.date-cell .van-cell{
+  background-color: #fff0f0;
+}
+.date-cell .van-cell__title{
+  flex: 3;
+  font-size: var(--md-font);
+}
+.date-cell .small{
+  margin-left: var(--sm-mg);
+  margin-right: var(--md-mg);
+  font-size: var(--sm-font);
+  color: #ccc;
+}
+/* 评分 */
+.rate{
+  color: #FFD21E;
+}
+.rate .num{
+  padding-left: 10rpx;
+  font-weight: 600;
+}

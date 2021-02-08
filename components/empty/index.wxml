@@ -1,0 +1,3 @@
+<van-empty description="{{ desc }}" image="{{ image }}">
+  <navigator class="btn-login" wx:if="{{ url }}" url="{{ url }}">{{ btnText }}</navigator>
+</van-empty>

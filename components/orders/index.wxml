@@ -1,37 +1,48 @@
 <block wx:if="{{ orders.length }}">
-  <view class="list">
-    <view class="item" wx:for="{{ orders }}" wx:item="item" wx:key="id">
-      <view class="top">
-        <image src="/icon/city.png" class="icon"></image>
-        <text class="status" style="color:{{ status[item.status].color}}">{{ status[item.status].label }}</text>
-      </view>
-      <view class="mid">
-        <view class="line1">
-          <text class="name">{{ item.name }}</text>
-          <text class="price">¥{{ item.price }}</text>
+  <scroll-view
+    scroll-y
+    refresher-enabled
+    lower-threshold="150"
+    refresher-triggered="{{ isRefresher }}"
+    bindrefresherrefresh="handleRefresher"
+    bindscrolltolower="handleScrollLower"
+    class="scroll-view"
+  >
+    <view class="list">
+      <view class="item" wx:for="{{ orders }}" wx:item="item" wx:key="id">
+        <view class="top">
+          <image src="/icon/city.png" class="icon"></image>
+          <text class="status" style="color:{{ status[item.status].color}}">{{ status[item.status].label }}</text>
         </view>
-        <view class="line2">{{ item.type }}</view>
-        <view class="line3">
-          <text class="date">{{ item.start }}</text>
-          <text class="wran">入住</text>
-          <text class="date">{{ item.end }}</text>
-          <text class="wran">离店</text>
-          <text>共{{ 1 }}晚</text>
+        <view class="mid">
+          <view class="line1">
+            <text class="name">{{ item.name }}</text>
+            <text class="price">¥{{ item.price }}</text>
+          </view>
+          <view class="line2">{{ item.type }}</view>
+          <view class="line3">
+            <text class="date">{{ item.start }}</text>
+            <text class="wran">入住</text>
+            <text class="date">{{ item.end }}</text>
+            <text class="wran">离店</text>
+            <text>共{{ 1 }}晚</text>
+          </view>
+        </view>
+        <view class="bot">
+          <block v-if="{{ status[item.status].btns && status[item.status].btns.length }}">
+            <van-button
+              wx:for="{{ status[item.status].btns }}"
+              wx:item="item"
+              wx:key="text"
+              size="small"
+              class="btn"
+              bind:click="{{ item.event }}"
+            >{{ item.text }}</van-button>
+          </block>
         </view>
       </view>
-      <view class="bot">
-        <block v-if="{{ status[item.status].btns && status[item.status].btns.length }}">
-          <van-button
-            wx:for="{{ status[item.status].btns }}"
-            wx:item="item"
-            wx:key="text"
-            size="small"
-            class="btn"
-          >{{ item.text }}</van-button>
-        </block>
-      </view>
+      <van-divider contentPosition="center">我也是有底线的</van-divider>
     </view>
-    <van-divider contentPosition="center">我也是有底线的</van-divider>
-  </view>
+  </scroll-view>
 </block>
 <van-empty wx:else image="default" description="暂无优惠券" />

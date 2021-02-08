@@ -1,0 +1,53 @@
+<view class="comment-wrap">
+  <view class="item">
+    <view class="user-info">
+      <view class="left">
+        <van-image
+          round
+          width="4rem"
+          height="4rem"
+          fit="cover"
+          class="avatar"
+          src="https://img.yzcdn.cn/vant/cat.jpeg"
+        />
+      </view>
+      <view class="right">
+        <view class="line1">
+          <view class="nick-name">匿名用户</view>
+          <view class="score">5.0</view>
+        </view>
+        <view class="line2">
+          <view class="date">2018-10-15 评价</view>
+          <van-rate
+            value="{{ value }}"
+            size="{{ 14 }}"
+            color="#FFD21E"
+            void-color="#FFD21E"
+            void-icon="star"
+          />
+        </view>
+      </view>
+    </view>
+    <view class="content-wrap">
+      <view class="content">
+        房间很温馨，前台服务特别热情，位置也很好，离景区很近，距离火车站只要15分钟，下次出差还会来~
+      </view>
+      <view class="images">
+        <image
+          width="33.2%"
+          height="10rem"
+          mode="aspectFit"
+          class="item"
+          wx:for="{{ images }}"
+          wx:item="{{ item }}"
+          wx:key="index"
+          src="{{ item }}"
+        />
+      </view>
+      <view class="in-type">
+        标准大床房（不含窗户）
+      </view>
+      <view class="back"></view>
+    </view>
+  </view>
+</view>

@@ -1,19 +1,28 @@
 page{
   padding: 0;
 }
-.card{
-  margin: var(--md-mg);
-  border-radius: var(--md-round);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-.van-info{
-  background-color: #ffc61b;
-}
+
 .user-block{
+  height: 300rpx;
+  margin-bottom: 126rpx;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #fff;
+}
+.user-block .bg{
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  filter: blur(10rpx);
+}
+.user-block .user-box{
+  position: absolute;
+  left: 30rpx;
+  top: 80rpx;
   display: flex;
   align-items: center;
-  padding: var(--md-pd);
 }
 .user-block .user-info{
   margin-left: var(--md-mg);
@@ -30,16 +39,35 @@ page{
   background-color: #ffc61b;
 }
 
+.fast-enter-wrap{
+  width: 100%;
+  position: absolute;
+  padding: var(--md-pd);
+  box-sizing: border-box;
+  top: 240rpx;
+}
+
 .fast-enter{
   display: flex;
   justify-content: space-between;
+  border-radius: var(--md-round);
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
 }
 .fast-enter .item{
   flex: 1;
   text-align: center;
-  padding: 40rpx 0 20rpx 0;
+  padding: 20rpx 0 20rpx 0;
 }
 .fast-enter .item .name{
   font-size: var(--sm-font);
   color: var(--viceColor);
+  margin-top: 14rpx;
+}
+
+.card{
+  margin: var(--md-mg);
+  border-radius: var(--md-round);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }

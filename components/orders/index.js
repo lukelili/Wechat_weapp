@@ -1,19 +1,12 @@
-// components/order/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
     orders: {
       type: Array,
       value: []
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
+    isRefresher: false,
     status: {
       toBePaid: {
         color: '#ff9c9b',
@@ -91,11 +84,35 @@ Component({
       }
     }
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
+    // 下拉刷新
+    handleRefresher() {
+      console.log('下拉被触发')
+      setTimeout(() => {
+        this.setData({
+          isRefresher: false
+        })
+        wx.showToast({
+          title: '数据刷新成功',
+          icon: 'none'
+        })
+      }, 1000)
+    },
+    // 滚动到底部
+    handleScrollLower() {
+      wx.showLoading({
+        mask: true,
+        title: '加载更多...',
+      })
 
+      setTimeout(() => {
+        wx.hideLoading()
+      }, 1000)
+      console.log('我还有50px到底部了')
+    },
+    // 去付款
+    handleToBePaid() {},
+    // 详情
+    handleDetails() {},
   }
 })

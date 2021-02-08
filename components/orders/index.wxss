@@ -1,6 +1,8 @@
+.scroll-view{
+  height: calc(100vh - 44px);
+}
 .list{
   padding: var(--md-pd);
-  background-color: #f5f5f5;
 }
 .item{
   margin-bottom: var(--md-pd);

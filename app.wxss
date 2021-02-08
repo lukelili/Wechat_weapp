@@ -17,8 +17,6 @@ page{
   --lg-round: 24rpx;
   /* 四边阴影 */
   --shadow: #eee 0 0 10px;
-  /* 主题色 */
-  --themeColor: '#FF6262';
   --viceColor: #ccc;
   /* 全局样式 */
   width: 100%;
@@ -28,4 +26,23 @@ page{
   box-sizing: border-box;
   font-size: 28rpx;
   color: #333;
+}
+
+.flex-start{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mg-l{
+  margin-left: var(--md-mg)
+}
+.mg-b{
+  margin-bottom: 30rpx;
 }

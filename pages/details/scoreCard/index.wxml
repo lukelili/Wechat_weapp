@@ -1,0 +1,35 @@
+<view class="comment-wrap">
+  <view class="comment-card">
+    <view class="left">
+      <view class="top">
+        <text class="num">5.0</text>
+        <text class="tag">超赞</text>
+      </view>
+      <van-rate
+        value="{{ value }}"
+        size="{{ 14 }}"
+        color="#FFD21E"
+        void-color="#FFD21E"
+        void-icon="star"
+      />
+    </view>
+    <view class="right">
+      <view class="item">
+        <text>卫生5.0</text>
+        <van-progress class="progress" stroke-width="8" color="#ff6162" show-pivot="{{ false }}" percentage="100" />
+      </view>
+      <view class="item">
+        <text>设置4.6</text>
+        <van-progress class="progress" stroke-width="8" color="#ff6162" show-pivot="{{ false }}" percentage="80" />
+      </view>
+      <view class="item">
+        <text>位置5.0</text>
+        <van-progress class="progress" stroke-width="8" color="#ff6162" show-pivot="{{ false }}" percentage="100" />
+      </view>
+      <view class="item">
+        <text>服务4.8</text>
+        <van-progress class="progress" stroke-width="8" color="#ff6162" show-pivot="{{ false }}" percentage="90" />
+      </view>
+    </view>
+  </view>
+</view>

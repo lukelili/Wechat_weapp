@@ -1,6 +1,7 @@
 
 .list{
   padding: var(--md-pd);
+  padding-bottom: 10rpx;
 }
 /* 水平1列 */
 .vertical .item{
@@ -9,6 +10,9 @@
 .vertical .row {
   display: flex;
   align-items: center;
+}
+.vertical .row .info{
+  flex: 1;
 }
 /* 水平2列 */
 .horizontal{
@@ -20,60 +24,124 @@
   width: 48%;
   margin-bottom: var(--md-mg);
 }
-.horizontal .item .row .info{
+.horizontal .item .info{
   margin-left: 0;
 }
-.row .picture{
+/* 通用样式 */
+.picture{
   border-radius: 10rpx;
   overflow: hidden;
   position: relative;
 }
-.row .picture .position{
+.picture .position{
   position: absolute;
   right: 20rpx;
   top: 30rpx;
   font-size: 24rpx;
 }
-.row .picture .position .text{
+.picture .position .text{
   padding: 6rpx 16rpx;
   border-radius: 30rpx;
   background-color: rgba(0,0,0,.5);
   color: #fff;
 }
-.row .info{
+.info{
   margin-left: 30rpx;
 }
-.row .info .line1{
+.info .line1{
   font-weight: bold;
 }
-.row .info .line2{
+.info .line2{
   padding: var(--sm-pd) 0;
 }
-.row .info .line3{
+.info .line3{
   padding-bottom: 4rpx;
 }
-.row .info .score{
+.info .score{
   font-weight: bold;
   color: #2ad093;
 }
-.row .info .number{
+.info .number{
   font-size: 24rpx;
   margin-left: 30rpx;
 }
-.row .info .price{
+.info .price{
   font-size: 40rpx;
   font-weight: bold;
   color: #ff6162;
 }
-.row .info .vice{
+.info .vice{
   font-size: 24rpx;
   color: #ccc;
   margin-left: 10rpx;
 }
-.row .info .red{
-  margin-left: 20rpx;
-  padding: 6rpx 14rpx;
+.info .van-tag{
+  margin-right: var(--sm-mg);
+}
+/* 历史于 收藏 */
+.info-history-like .van-tag{
+  margin-left: var(--sm-mg);
+}
+/* 产品详情 */
+.info-product{
+  position: relative;
+}
+.info-product .green{
+  color: #28d094;
+}
+.info-product .line4{
+  margin-bottom: 20rpx;
+}
+.info-product .orig-price{
+  text-decoration: line-through;
+}
+/* 在线预定 */
+.info-product .right-btn{
+  position: absolute;
+  right: 0;
+  top: 40rpx;
+  color: #ff6162;
+}
+.info-product .right-btn .btn{
+  overflow: hidden;
+  border: 1px solid #ff6162;
+  border-radius: var(--sm-round);
+  text-align: center;
+}
+.info-product .right-btn .top{
+  font-size: 32rpx;
+  font-weight: 700;
+  padding: 14rpx 0;
+  background-color: #ff6162;
+  color: #fff;
+}
+.info-product .right-btn .bot{
+  font-size: var(--sm-font);
+  padding: 16rpx 10rpx;
+  background-color: #fff0f0;
+}
+.info-product .right-btn .tips{
+  text-align: center;
+  font-size: var(--sm-font);
+  padding: 6rpx 0;
+}
+/* 附近热销版 */
+.nearby-hot .price{
+  font-size: 32rpx;
+}
+.nearby-hot .line3 .num{
+  margin-left: var(--sm-mg);
   font-size: 24rpx;
-  border: 1rpx solid #ffd66a;
-  color: #ffd66a;
+  color: #FFD21E;
+}
+
+/* 滑动删除按钮 */
+.van-swipe-cell__right{
+  width: 117rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF6262;
+  color: #fff;
 }

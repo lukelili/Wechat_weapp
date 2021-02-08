@@ -1,3 +1,7 @@
-<view>
+<view class="login">
+  <view class="app">
+    <image src="/icon/city.png"></image>
+    <view class="name">酒店预订</view>
+  </view>
   <button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
 </view>

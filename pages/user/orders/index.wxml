@@ -1,4 +1,4 @@
-<van-tabs active="{{ active }}" bind:change="handleTabChange" sticky>
+<van-tabs active="{{ active }}" swipeable animated bind:change="handleTabChange" sticky>
   <van-tab title="全部订单" name="all">
     <orders orders="{{ orders }}" />
   </van-tab>
@@ -12,3 +12,4 @@
     <orders orders="{{ filtersData }}" />
   </van-tab>
 </van-tabs>
+<empty desc="你还没有登录，请登录后查看" image="/icon/un_login.png" url="/pages/login/index" />

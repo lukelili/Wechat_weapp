@@ -1,2 +1,2 @@
-<!--pages/like/index.wxml-->
-<text>pages/like/index.wxml</text>
+
+<empty wx:if="{{ isLogin }}" url="/pages/login/index" />

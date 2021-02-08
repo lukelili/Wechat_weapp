@@ -1,0 +1,61 @@
+/* 住客评价 */
+.comment-wrap{
+  padding: var(--md-pd);
+  padding-top: 0;
+}
+.comment-card{
+  display: flex;
+  align-items: center;
+  padding: var(--md-pd);
+  border-radius: var(--md-round);
+  background-color: #fff0f0;
+}
+.comment-card .left{
+  position: relative;
+  padding-right: var(--md-pd);
+}
+.comment-card .left::after{
+  content: '';
+  width: 1px;
+  height: 100rpx;
+  background-color: #ff6162;
+  position: absolute;
+  right: 0;
+  top: 8rpx;
+}
+.comment-card .left .top{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20rpx;
+}
+.comment-card .left .num{
+  font-size: 60rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  margin-right: var(--sm-mg);
+}
+.comment-card .left .tag{
+  padding: 6rpx 10rpx;
+  border-radius: var(--sm-round);
+  font-size: var(--sm-font);
+  background-image: linear-gradient(-90deg, #fff514, #ffd84f);
+  color: #fff;
+}
+.comment-card .right{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: var(--md-pd);
+}
+.comment-card .right .item{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  font-size: var(--sm-font);
+}
+.comment-card .right .item:nth-child(1), .comment-card .right .item:nth-child(2) {
+  margin-bottom: var(--md-mg);
+}
+.comment-card .right .item .progress{
+  margin: 0 var(--sm-mg);
+  flex: 1;
+}

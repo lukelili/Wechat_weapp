@@ -1,15 +1,20 @@
 <view class="list {{ mode === 'vertical' ? 'vertical' : 'horizontal' }}">
-  <view class="item" wx:for="{{ products }}" wx:item="item" wx:key="id">
-    <van-swipe-cell right-width="{{ 65 }}">
+  <view class="item"
+    wx:for="{{ products }}"
+    wx:item="item"
+    wx:key="id">
+    <van-swipe-cell bind:click="handleToDetails" right-width="{{ 65 }}" disabled="{{ disabled }}">
       <view class="row">
+        <!-- 图片 -->
         <view class="picture">
-          <van-image width="12rem" height="8rem" fit="contain">
+          <van-image width="{{ image.w }}" height="{{ image.h }}" fit="contain">
           </van-image>
           <view class="position">
             <text class="text">{{ item.position }}</text>
           </view>
         </view>
-        <view class="info">
+        <!-- 浏览历史 和 收藏版 -->
+        <view class="info info-history-like" wx:if="{{ history || like }}">
           <view class="line1">{{ item.title }}</view>
           <view class="line2">
             <text class="score">{{ item.score }}</text>
@@ -18,10 +23,51 @@
           <view class="line3">
             <text class="price">¥{{ item.price }}</text>
             <text class="vice">起</text>
-            <text class="red">{{ item.red }}</text>
+            <van-tag class="van-tag" size="medium" color="#ffc71c" text-color="#ffc71c" plain>{{ item.red }}</van-tag>
+          </view>
+        </view>
+        <!-- 产品详情版 -->
+        <view class="info info-product" wx:elif="{{ product }}">
+          <view class="line1">{{ item.title }}</view>
+          <view class="line2 vice">不含早 m²大床 无窗</view>
+          <view class="line3 vice green">不可取消</view>
+          <view class="line4">
+            <text class="price">¥{{ item.price }}</text>
+            <text class="vice orig-price">￥365</text>
+          </view>
+          <view>
+            <van-tag class="van-tag" size="medium" color="#ffc71c" text-color="#ffc71c" plain>会员价</van-tag>
+            <van-tag class="van-tag" size="medium" color="#ffc71c" text-color="#ffc71c" plain>新人红包</van-tag>
+          </view>
+          <view class="right-btn">
+            <view class="btn" catchtap="handleOnLine">
+              <view class="top">订</view>
+              <view class="bot">在线付</view>
+            </view>
+            <view class="tips">仅剩1间</view>
+          </view>
+        </view>
+        <!-- 附件热销版 -->
+        <view class="info nearby-hot" wx:elif="{{ nearby }}">
+          <view class="line1">{{ item.title }}</view>
+          <view class="line2">
+            <text class="price">¥{{ item.price }}</text>
+            <text class="vice">起</text>
+          </view>
+          <view class="line3">
+            <van-rate
+              value="{{ value }}"
+              size="{{ 12 }}"
+              color="#FFD21E"
+              void-color="#FFD21E"
+              void-icon="star"
+            />
+            <text class="num">4.9分</text>
           </view>
         </view>
       </view>
+      <!-- 滑动删除按钮 -->
+      <view slot="right" class="van-swipe-cell__right">删除</view>
     </van-swipe-cell>
   </view>
 </view>

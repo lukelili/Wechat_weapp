@@ -1,0 +1,88 @@
+<view class="page-section page-section-spacing swiper">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <!-- <view class="swiper-item {{item}}"></view> -->
+        <van-image width="100%" height="100%" src="/icon/user_bg.jpg"></van-image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 酒店信息 -->
+<view class="content">
+  <view class="block shadow">
+    <view class="hote-info">
+      <van-cell title="贯通现代酒店(北京前门店)" border="{{ false }}" class="my-cell-title" center="{{ true }}" is-link value="五星级" />
+      <van-cell border="{{ false }}" class="my-cell" center="{{ true }}" is-link value="599条评价">
+        <view class="rate" slot="title">
+          <van-rate
+            value="{{ value }}"
+            size="{{ 14 }}"
+            color="#FFD21E"
+            void-color="#FFD21E"
+            void-icon="star"
+          />
+          <text class="num">4.9分</text>
+        </view>
+      </van-cell>
+    </view>
+    <view class="address">
+      <van-cell icon="location" border="{{ false }}" class="my-cell" center="{{ true }}" title="和平西桥樱花西街89号" label="距和平西桥地铁站直线0.2公里，步行约0.8公里，预计5分钟" is-link value="地图/导航" />
+    </view>
+  </view>
+  <view class="block shadow">
+    <van-cell border="{{ false }}" class="my-cell" center="{{ true }}" is-link value="领取">
+      <view slot="title" class="flex-start">
+        <view class="van-cell-text">优惠券</view>
+        <van-tag class="mg-l" color="#ff9c9b" text-color="#ff6162" type="danger" plain size="large">满200减30</van-tag>
+      </view>
+    </van-cell>
+  </view>
+  <view class="block last">
+    <van-cell border="{{ false }}" class="date-cell" center="{{ true }}" is-link value="共1晚">
+      <view slot="title" class="flex-start date">
+        <text class="date">12月17日</text>
+        <text class="small">入住</text>
+        <text class="date">12月17日</text>
+        <text class="small">离店</text>
+      </view>
+    </van-cell>
+  </view>
+</view>
+<!-- 酒店产品 -->
+<view class="block shadow">
+  <productor
+    products="{{ products }}"
+    range="product"
+    image="{{ { w:'7rem', h: '9rem' } }}"
+    mode="vertical"
+    jump="currentPage"
+    bindshow="showChildEvent"
+  />
+</view>
+<!-- 酒店设施 -->
+<view class="block mg-b shadow">
+  <van-cell title="酒店设施" border="{{ false }}" class="my-cell" center="{{ true }}" is-link value="更多详情" />
+    <van-grid border="{{ false }}">
+    <van-grid-item icon="/icon/wifi.png" text="WIFI" />
+    <van-grid-item icon="/icon/restaurant.png" text="自助餐厅" />
+    <van-grid-item icon="/icon/parking.png" text="停车场" />
+    <van-grid-item icon="/icon/meeting.png" text="会议室" />
+    <van-grid-item icon="/icon/baggage.png" text="行李寄存" />
+    <van-grid-item icon="/icon/shower.png" text="热水淋浴" />
+    <van-grid-item icon="/icon/business.png" text="商务中心" />
+  </van-grid>
+</view>
+<!-- 住客评价 -->
+<van-cell title="住客评价" border="{{ false }}" />
+<scoreCard />
+<!-- 评论 -->
+<comment />
+<!-- 附近热销酒店 -->
+<view class="block shadow">
+  <van-cell title="附近热销酒店" border="{{ false }}" />
+  <productor products="{{ products }}" range="nearby" mode="horizontal"></productor>
+</view>
+<van-divider contentPosition="center">1000万安心保障</van-divider>
+

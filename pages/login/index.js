@@ -1,5 +1,6 @@
 // pages/login/index.js
 import { login } from '../../utils/asyncWx'
+import { setItem } from '../../utils/storage'
 Page({
 
   /**
@@ -8,13 +9,19 @@ Page({
   data: {
 
   },
+  // 获取用户信息
   async getUserInfo(e) {
-    // 获取用户信息
-    const { encryptedData, iv, rawData, signature } = e
-    // 获取小程序登录成功后的code
+    const { encryptedData, iv, rawData, signature, userInfo } = e.detail
+    // 拒绝授权
+    if (!userInfo) {
+      wx.showToast({ title: '用户未授权', icon: 'none', duration: 2000 })
+      return
+    }
+    // 发送 res.code 到后台换取 openId, sessionKey, unionId
     const { code } = await login()
-    console.log(code)
-    
+    setItem('userInfo', userInfo)
+    getApp().globalData.userInfo = userInfo
+    wx.navigateBack({ delta: 1 })
   },
   /**
    * 生命周期函数--监听页面加载

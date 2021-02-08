@@ -29,7 +29,6 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
@@ -81,7 +80,7 @@
         {
           "name": "pages/user/orders/index",
           "pathName": "pages/user/orders/index",
-          "query": "",
+          "query": "name=toBePaid",
           "scene": null
         },
         {
@@ -100,6 +99,30 @@
           "name": "pages/home/city/index",
           "pathName": "pages/home/city/index",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/like/index",
+          "pathName": "pages/like/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/index",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "name=toBePaid",
+          "scene": null
+        },
+        {
+          "name": "pages/details/index",
+          "pathName": "pages/details/index",
+          "query": "name=toBePaid",
           "scene": null
         }
       ]
